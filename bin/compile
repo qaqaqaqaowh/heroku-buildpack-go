@@ -319,6 +319,7 @@ ensureGo() {
                             GOROOT_BOOTSTRAP=$(pushd ${cache}/${bGoVersion}/go > /dev/null; pwd; popd > /dev/null) ./make.bash 2>&1
                         popd &> /dev/null
                         go/bin/go version
+                        go/bin/go get -u github.com/bwmarrin/dca/cmd/dca
                         rm -rf "${goPath}"
                     popd &> /dev/null
                 popd &> /dev/null
